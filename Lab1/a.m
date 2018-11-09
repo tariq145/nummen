@@ -1,32 +1,16 @@
 clear all
 close all
 
+%maxvärdet vmax
 max = 25
 
+%avståndet mellan bilarna
 d = 70
 
-k = max / d
-
-
-%size
-%lenght
-%ones
-%Dessa är metoder för att testa matricer
-
-%Första intervallet
-x1 = 0:1:d
-y1 = k*x1
-
-%Andra intervallet
-x2 = d:1:d + 100
-y2 = ones(1, length(x2)) * max
-
-
-x = [x1 x2]
-y =[y1 y2]
-
+%funktionen f tar in vmax och d
+[xKoord, yKoord] = f(max, d)
 
 %Plottar y som en function av x , y=f(x)
-plot(x, y)
+plot(xKoord, yKoord)
 
 axis([0 200 0 100])
